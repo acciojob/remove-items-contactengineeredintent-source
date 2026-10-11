@@ -3,7 +3,6 @@ let btnRemove = document.getElementById("btnRemove");
 btnRemove.addEventListener("click",(event)=>{
   let colorSelect = document.getElementById("colorSelect");
   event.preventDefault();
-  let selectedColor = colorSelect.value;
-  document.getElementById(`${selectedColor}`).remove();
+  colorSelect.options[colorSelect.selectedIndex].remove();
   // console.log(selectedColor);
 });
